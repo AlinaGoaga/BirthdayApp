@@ -1,4 +1,6 @@
 require 'sinatra/base'
+require './lib/days.rb'
+require 'time'
 
 class Birthday < Sinatra::Base
   get '/' do
@@ -9,7 +11,15 @@ class Birthday < Sinatra::Base
     @name = params[:name]
     @day = params[:day]
     @month = params[:month]
-    redirect '/'
+    redirect "/message?month=#{@month}&day=#{@day}&name=#{@name}"
+  end
+
+  get '/message' do
+    @name = params[:name]
+    @day = params[:day].to_i
+    @month = params[:month].to_i
+    @days = Days.new(2019, @month, @day).calculate_days
+    erb :message
   end
 
   run! if app_file == $PROGRAM_NAME
