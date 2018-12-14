@@ -1,16 +1,33 @@
+<!DOCTYPE html>
+<html>
 <body style="background-color: lightblue">
-<h1> Hello there! </h1>
-</body>
+  <h1 style="display:flex; justify-content:center; align-items:center;"> Hello there! </h1>
+  <div style="display:flex; justify-content:center; align-items:center;">
+    <form action="/details" method="post" style="width:300px">
 
-<form action="/details" method="post">
-  <label for="name">
-    What's your name?
-    <input type="text" name="name">
-  </label>
-  <label for="day and month">
-    When's your birthday?
-    <input type="text" name="day">
-    <input type="text" name="month">
-  </label>
-  <input type="submit" value="Go!">
-</form>
+<fieldset>
+      <label for="name">
+        What's your name?<br>
+        <input type="text" name="name" placeholder='Your name' style="width:300px"><br>
+      </label>
+
+      <br>
+
+      <label for="birthday">
+        When is your birthday?<br>
+        Day:
+        <input type="text" name="day" placeholder='Day' style="width:300px">
+        Month:
+        <input type="text" name="month" placeholder='Month in the 1,2,3 format' style="width:300px"><br>
+
+      <br>
+
+      <input type="submit" value="Go!">
+
+      <br>
+</fieldset>
+
+    </form>
+  </div>
+</body>
+</html>
