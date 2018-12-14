@@ -1,5 +1,5 @@
-### App which calculates how many days are left until your birthday ###
+## App which calculates how many days are left until your birthday ##
 
-## Using Sinatra and rspec,capybara for testing ##
+### Using Sinatra and rspec, capybara for testing ###
 
 
