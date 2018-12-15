@@ -1,5 +1,5 @@
 require 'time'
-class Days
+class BirthdayCalculator
   attr_reader :year, :month, :day
 
   def initialize(year, month, day)

@@ -2,7 +2,7 @@
 <html>
 <body style="background-color: lightblue">
   <div style="display:flex; justify-content:center; align-items:center;">
-    <% if @days == 0 %>
+    <% if @days == 365 %>
     <h1> Your birthday is today! Happy birthday! </h1>
     <% elsif @days < 365  %>
     <h1> Your birthday will be in <%= @days %> days, <%= @name %> </h1>

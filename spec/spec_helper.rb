@@ -22,6 +22,7 @@ require File.join(File.dirname(__FILE__), '..', 'birthday.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'timecop'
 
 # tell Capybara about our app class
 Capybara.app = Birthday

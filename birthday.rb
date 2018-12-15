@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require './lib/days.rb'
+require './lib/birthday_calculator.rb'
 require 'time'
 
 class Birthday < Sinatra::Base
@@ -18,7 +18,7 @@ class Birthday < Sinatra::Base
     @name = params[:name]
     @day = params[:day].to_i
     @month = params[:month].to_i
-    @days = Days.new(2019, @month, @day).calculate_days
+    @days = BirthdayCalculator.new(2019, @month, @day).calculate_days
     erb :message
   end
 
