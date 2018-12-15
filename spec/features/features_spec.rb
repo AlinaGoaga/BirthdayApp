@@ -1,5 +1,3 @@
-
-
 feature 'Welcome page' do
   scenario 'greeting the user' do
     visit('/')

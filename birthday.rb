@@ -18,7 +18,7 @@ class Birthday < Sinatra::Base
     @name = params[:name]
     @day = params[:day].to_i
     @month = params[:month].to_i
-    @days = BirthdayCalculator.new(2019, @month, @day).calculate_days
+    @days = BirthdayCalculator.new(@month, @day).calculate_days
     erb :message
   end
 
